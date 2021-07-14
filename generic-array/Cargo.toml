@@ -25,6 +25,9 @@ repository = "https://github.com/fizyk20/generic-array.git"
 [lib]
 name = "generic_array"
 
+[dependencies]
+sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
+
 [dependencies.serde]
 git = "https://github.com/mesalock-linux/serde-sgx"
 version = "1.0"
