@@ -1,5 +1,5 @@
 [package]
-name = "digest"
+name = "digest_2"
 version = "0.0.0"
 
 [dependencies]
