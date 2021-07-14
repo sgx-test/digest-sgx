@@ -1,0 +1,10 @@
+[package]
+name = "digest"
+version = "0.0.0"
+
+[dependencies]
+typenum = { path = "./typenum", default-features = false }
+blobby = { path = "./blobby", default-features = false }
+generic-array = { path = "./generic-array", default-features = false }
+digest = { path = "./digest", default-features = false }
+byteorder = { git = "https://github.com/mesalock-linux/byteorder-sgx" }
