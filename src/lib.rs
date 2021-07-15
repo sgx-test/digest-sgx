@@ -6,8 +6,8 @@
 extern crate sgx_tstd as std;
 
 
-use typenum;
-use blobby;
-use generic_array;
-use digest;
-use byteorder;
+extern crate typenum;
+extern crate  blobby;
+extern crate  generic_array;
+extern crate  digest;
+extern crate  byteorder;
