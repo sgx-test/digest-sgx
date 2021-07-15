@@ -9,11 +9,7 @@ dependencies = [
 
 [[package]]
 name = "byteorder"
-version = "1.3.4"
-source = "git+https://github.com/mesalock-linux/byteorder-sgx#325f392dcd294109eb05f0a3c45e4141514c7784"
-dependencies = [
- "sgx_tstd",
-]
+version = "1.4.3"
 
 [[package]]
 name = "cc"
