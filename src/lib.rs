@@ -11,3 +11,5 @@ extern crate  blobby;
 extern crate  generic_array;
 extern crate  digest;
 extern crate  byteorder;
+
+pub use digest;
