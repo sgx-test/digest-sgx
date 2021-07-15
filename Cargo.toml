@@ -2,6 +2,11 @@
 name = "digest_2"
 version = "0.0.0"
 
+[workspace]
+members = [
+    "digest"
+]
+
 [dependencies]
 typenum = { path = "./typenum", default-features = false }
 blobby = { path = "./blobby", default-features = false }
