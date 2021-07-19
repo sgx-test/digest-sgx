@@ -41,6 +41,6 @@ default-features = false
 version = "0.7"
 
 [features]
-default = []
+default = ["std"]
 i128 = []
 std = []
