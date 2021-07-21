@@ -38,10 +38,14 @@ default-features = false
 version = "1.10"
 path = "../typenum"
 
-[dev-dependencies.bincode]
-version = "1.0"
+#[dev-dependencies.bincode]
+#version = "1.0"
 
-[dev-dependencies.serde_json]
-version = "1.0"
+#[dev-dependencies.serde_json]
+#version = "1.0"
 [badges.travis-ci]
 repository = "fizyk20/generic-array"
+
+[features]
+default = ["mesalock_sgx"]
+mesalock_sgx = ["sgx_tstd"]
