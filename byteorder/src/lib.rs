@@ -76,7 +76,7 @@ cases.
 #[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
 #[macro_use]
 extern crate sgx_tstd as std;
-
+use std::prelude::v1::*;
 use core::{
     convert::TryInto, fmt::Debug, hash::Hash, ptr::copy_nonoverlapping, slice,
 };
