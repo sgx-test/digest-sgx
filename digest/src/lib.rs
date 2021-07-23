@@ -22,10 +22,11 @@
 #[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
 #[macro_use]
 extern crate sgx_tstd as std;
+use std::prelude::v1::*;
 
 pub extern crate generic_array;
-#[cfg(feature = "std")]
-#[macro_use] extern crate std;
+//#[cfg(feature = "std")]
+//#[macro_use] extern crate std;
 #[cfg(feature = "dev")]
 pub extern crate blobby;
 use generic_array::{GenericArray, ArrayLength};
@@ -93,7 +94,7 @@ pub trait VariableOutput: core::marker::Sized {
     fn variable_result<F: FnOnce(&[u8])>(self, f: F);
 
     /// Retrieve result into vector and consume hasher.
-    #[cfg(feature = "std")]
+    //#[cfg(feature = "std")]
     fn vec_result(self) -> Vec<u8> {
         let mut buf = Vec::with_capacity(self.output_size());
         self.variable_result(|res| buf.extend_from_slice(res));
@@ -116,7 +117,7 @@ pub trait ExtendableOutput: core::marker::Sized {
     fn xof_result(self) -> Self::Reader;
 
     /// Retrieve result into vector of specified length.
-    #[cfg(feature = "std")]
+    //#[cfg(feature = "std")]
     fn vec_result(self, n: usize) -> Vec<u8> {
         let mut buf = vec![0u8; n];
         self.xof_result().read(&mut buf);
